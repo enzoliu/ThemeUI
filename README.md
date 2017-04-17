@@ -18,7 +18,6 @@ pod 'ThemeUI'
 
   
 ## Usage  
-**Swift 3**
 Provide a `JSON` file in your project, like this:  
 ```JSON
 {
@@ -123,7 +122,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
 ```  
 `Command + R` !  
 You will see the result like this :  
-<img src="http://i.imgur.com/poK8ckH.png" />  
+<img src="http://i.imgur.com/Sv0UurB.png" />  
 
 ## Change log  
 v0.1.0 - Initial release  
