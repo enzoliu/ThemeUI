@@ -1,0 +1,60 @@
+{
+    "Name" : "Orange",
+    "Body" :
+    {
+        "Label" :
+        [
+            {
+                "ID" : "LS01",
+                "Style" :
+                {
+                    "Font.Color" : "414142, 1",
+                    "Font.Size" : 13,
+                    "Font.Family" : "Default",
+                    "Font.Bold" : true
+                }
+            },
+            {
+                "ID" : "LS02",
+                "Style" :
+                {
+                    "Font.Color" : "FB6D51, 1",
+                    "Font.Size" : 13,
+                    "Font.Family" : "Default"
+                }
+            }
+        ],
+
+        "View" :
+        [
+            {
+                "ID" : "VS01",
+                "Style" :
+                {
+                    "BG.Color" : "FDE3D9, 0.7",
+                    "Border.RoundConer" : 5,
+                    "Border.Color" : "FB6D51, 1",
+                    "Border.Width" : 0.5
+                }
+            }
+        ],
+
+        "Button" :
+        [
+            {
+                "ID" : "BS01",
+                "Style-Normal" :
+                {
+                    "BG.Color" : "FFFFFF, 0.5",
+                    "Border.Color" : "FB6D51, 1",
+                    "Border.Width" : 0.5,
+                    "Border.RoundConer" : 5
+                },
+                "Style-Highlight" :
+                {
+                    "BG.Color" : "FB6D51, 1"
+                }
+            }
+        ]
+    }
+}
