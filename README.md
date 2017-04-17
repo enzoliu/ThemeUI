@@ -1,8 +1,8 @@
 # ThemeUI
 
-[![Version](https://img.shields.io/cocoapods/v/StickyScrollView.svg?style=flat)](http://cocoapods.org/pods/StickyScrollView)
-[![License](https://img.shields.io/cocoapods/l/StickyScrollView.svg?style=flat)](http://cocoapods.org/pods/StickyScrollView)
-[![Platform](https://img.shields.io/cocoapods/p/StickyScrollView.svg?style=flat)](http://cocoapods.org/pods/StickyScrollView)
+[![Version](https://img.shields.io/cocoapods/v/ThemeUI.svg?style=flat)](http://cocoapods.org/pods/ThemeUI)
+[![License](https://img.shields.io/cocoapods/l/ThemeUI.svg?style=flat)](http://cocoapods.org/pods/ThemeUI)
+[![Platform](https://img.shields.io/cocoapods/p/ThemeUI.svg?style=flat)](http://cocoapods.org/pods/ThemeUI)
 
 **A JSON based UI style setting for iOS.**  
 
