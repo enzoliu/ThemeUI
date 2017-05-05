@@ -34,7 +34,7 @@ public struct TransformConfig {
 }
 
 public class RenderController: ThemeDelegate {
-    static let shared: RenderController = RenderController()
+    public static let shared: RenderController = RenderController()
     var viewStylingQueue: [TransformConfig] = []
     
     public func setStyle(target: UIView, styleID: String, theme: Theme, animate: Bool) {

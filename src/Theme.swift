@@ -9,16 +9,17 @@
 import Foundation
 import UIKit
 
-protocol ThemeDelegate: class {
+public protocol ThemeDelegate: class {
     func didFinishedLoadConfig()
 }
 
 public class Theme {
+    public var delegate: ThemeDelegate?         = nil
+    public var isLoaded: Bool                   = false
     var viewStyle: [String: StyleCollection]    = [:]
     var defined: [String: Any]                  = [:]
     var name: String                            = ""
-    var delegate: ThemeDelegate?                = nil
-    var isLoaded: Bool                          = false
+    
     
     public init() {
     }
