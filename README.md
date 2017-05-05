@@ -208,7 +208,6 @@ class ViewController: UIViewController, UIScrollViewDelegate {
 
 `Command + R` !  
 You will see the result like this :  
-<img src="http://i.imgur.com/o4I6TxB.gifv" /> 
 ![image](https://github.com/enzoliu/ThemeUI/tree/master/resources/ThemeUI.gif) 
 
 ## Change log
