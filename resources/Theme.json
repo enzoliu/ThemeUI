@@ -1,5 +1,36 @@
 {
     "Name" : "Orange",
+    "Define" :
+    [
+        {
+            "Name" : "White1",
+            "Value" : "FFFFFF, 1"
+        },
+        {
+            "Name" : "Black2",
+            "Value" : "222222, 0.7"
+        },
+        {
+            "Name" : "Orange1",
+            "Value" : "FB6D51, 1"
+        },
+        {
+            "Name" : "Orange2",
+            "Value" : "FDE3D9, 0.7"
+        },
+        {
+            "Name" : "Small",
+            "Value" : 10.0
+        },
+        {
+            "Name" : "Medium",
+            "Value" : 13.0
+        },
+        {
+            "Name" : "Large",
+            "Value" : 20.0
+        }
+    ],
     "Body" :
     {
         "Label" :
@@ -8,8 +39,8 @@
                 "ID" : "LS01",
                 "Style" :
                 {
-                    "Font.Color" : "414142, 1",
-                    "Font.Size" : 13,
+                    "Font.Color" : "White1",
+                    "Font.Size" : "Large",
                     "Font.Family" : "Default",
                     "Font.Bold" : true
                 }
@@ -18,8 +49,8 @@
                 "ID" : "LS02",
                 "Style" :
                 {
-                    "Font.Color" : "FB6D51, 1",
-                    "Font.Size" : 13,
+                    "Font.Color" : "Orange1",
+                    "Font.Size" : "Medium",
                     "Font.Family" : "Default"
                 }
             }
@@ -31,11 +62,21 @@
                 "ID" : "VS01",
                 "Style" :
                 {
-                    "BG.Color" : "FDE3D9, 0.7",
-                    "Border.RoundConer" : 5,
-                    "Border.Color" : "FB6D51, 1",
+                    "BG.Color" : "Orange2",
+                    "Border.RoundCorner" : 5,
+                    "Border.Color" : "Orange1",
                     "Border.Width" : 0.5
                 }
+            },
+            {
+                 "ID" : "VS02",
+                 "Style" :
+                 {
+                     "BG.Color" : "White1",
+                     "Border.Color" : "000000, 1",
+                     "Border.Width" : 0.5,
+                     "Border.RoundCorner" : 0
+                 }
             }
         ],
 
@@ -45,14 +86,18 @@
                 "ID" : "BS01",
                 "Style-Normal" :
                 {
-                    "BG.Color" : "FFFFFF, 0.5",
-                    "Border.Color" : "FB6D51, 1",
+                    "BG.Color" : "Orange1",
+                    "Border.Color" : "FFFFFF, 1",
                     "Border.Width" : 0.5,
-                    "Border.RoundConer" : 5
+                    "Border.RoundCorner" : 5,
+                    "Font.Size" : "Small",
+                    "Font.Color" : "Black2"
                 },
                 "Style-Highlight" :
                 {
-                    "BG.Color" : "FB6D51, 1"
+                    "BG.Color" : "Orange2",
+                    "Font.Size" : "Large",
+                    "Font.Color" : "White1"
                 }
             }
         ]

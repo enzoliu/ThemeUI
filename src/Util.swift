@@ -33,15 +33,15 @@ extension UIColor {
     ///   - hex: the hex string without '#'.
     ///   - alpha: alpha number. value between 0 ~ 1.
     convenience init(hexString hex: String, alpha: CGFloat = 1) {
-        guard hex.characters.count == 6 else {
+        guard let hexInt = Int(hex.replacingOccurrences(of: "#", with: ""), radix: 16) else {
             self.init(red: 0, green: 0, blue: 0, alpha: 0)
             return
         }
-        
-        let red = CGFloat(Int(hex.subString(from: 0, to: 1), radix: 16)!)
-        let green = CGFloat(Int(hex.subString(from: 2, to: 3), radix: 16)!)
-        let blue = CGFloat(Int(hex.subString(from: 4, to: 5), radix: 16)!)
-        self.init(red: red/255, green: green/255, blue: blue/255, alpha: alpha)
+        let red = CGFloat((hexInt & 0xff0000) >> 16) / 255.0
+        let green = CGFloat((hexInt & 0xff00) >> 8) / 255.0
+        let blue = CGFloat((hexInt & 0xff) >> 0) / 255.0
+
+        self.init(red: red, green: green, blue: blue, alpha: alpha)
     }
     
     
