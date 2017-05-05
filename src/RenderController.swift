@@ -9,13 +9,13 @@
 import Foundation
 import UIKit
 
-struct TransformConfig {
+public struct TransformConfig {
     weak var target: UIView?
     var styleID: String
     weak var theme: Theme?
     var animate: Bool
     
-    func render() {
+    public func render() {
         guard self.styleID.characters.count > 0 else {
             return
         }
@@ -33,11 +33,11 @@ struct TransformConfig {
     }
 }
 
-class RenderController: ThemeDelegate {
+public class RenderController: ThemeDelegate {
     static let shared: RenderController = RenderController()
     var viewStylingQueue: [TransformConfig] = []
     
-    func setStyle(target: UIView, styleID: String, theme: Theme, animate: Bool) {
+    public func setStyle(target: UIView, styleID: String, theme: Theme, animate: Bool) {
         let config = TransformConfig(target: target, styleID: styleID, theme: theme, animate: animate)
         if theme.isLoaded {
             config.render()
@@ -46,7 +46,7 @@ class RenderController: ThemeDelegate {
         }
     }
     
-    func apply() {
+    public func apply() {
         for config in viewStylingQueue {
             config.render()
         }

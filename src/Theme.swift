@@ -13,25 +13,25 @@ protocol ThemeDelegate: class {
     func didFinishedLoadConfig()
 }
 
-class Theme {
+public class Theme {
     var viewStyle: [String: StyleCollection]    = [:]
     var defined: [String: Any]                  = [:]
     var name: String                            = ""
     var delegate: ThemeDelegate?                = nil
     var isLoaded: Bool                          = false
     
-    init() {
+    public init() {
     }
     
-    init(jsonString: String) {
+    public init(jsonString: String) {
         self.loadConfig(jsonString)
     }
     
-    init(data: Data) {
+    public init(data: Data) {
         self.loadConfig(data)
     }
     
-    func loadConfig(_ jsonString: String? = nil) {
+    public func loadConfig(_ jsonString: String? = nil) {
         var data = jsonString?.data(using: .utf8)
         if data == nil {
             if let file = Bundle.main.path(forResource: "Theme", ofType: "json") {
@@ -41,7 +41,7 @@ class Theme {
         self.loadConfig(data)
     }
     
-    func loadConfig(_ data: Data?) {
+    public func loadConfig(_ data: Data?) {
         var jsonSerial: Any?
         
         guard let jsonData = data else {
@@ -85,7 +85,7 @@ class Theme {
         self.delegate?.didFinishedLoadConfig()
     }
     
-    func getStyleCollection(ID: String) -> StyleCollection? {
+    public func getStyleCollection(ID: String) -> StyleCollection? {
         return self.viewStyle[ID]
     }
     

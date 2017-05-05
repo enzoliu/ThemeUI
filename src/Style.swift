@@ -78,16 +78,16 @@ extension UIButton {
     }
 }
 
-struct StyleCollection {
+public struct StyleCollection {
     var name: String
     var styles: [HashableControlState: [StyleProperty]]
     
-    init() {
+    public init() {
         name = ""
         styles = [:]
     }
     
-    func setup(view: UIView, animate: Bool = true) {
+    public func setup(view: UIView, animate: Bool = true) {
         DispatchQueue.main.async {
             for key in self.styles.keys {
                 guard let styles = self.styles[key] else {
@@ -144,14 +144,14 @@ protocol StyleProperty {
 //
 // MARK:- Font : StyleProlerty
 //
-struct Font : StyleProperty {
+public struct Font : StyleProperty {
     var family: String          = "default"
     var size: CGFloat           = 12
     var color: UIColor          = UIColor.black
     var bold: Bool              = false                             // Only work for system font
     var font: UIFont            = UIFont.systemFont(ofSize: 12)
     
-    init(propSet: [String: Any]) {
+    public init(propSet: [String: Any]) {
         let keys = propSet.keys.filter{ x in x.components(separatedBy: ".").get(0)?.lowercased() == "font" }
         for key in keys {
             switch key.lowercased() {
@@ -183,7 +183,7 @@ struct Font : StyleProperty {
         }
     }
     
-    func apply(view: UIView, for state: UIControlState = UIControlState.normal) {
+    public func apply(view: UIView, for state: UIControlState = UIControlState.normal) {
         if view is UILabel || view is UITextView || view is UITextField {
             view.setValue(self.font, forKey: "font")
             view.setValue(self.color, forKey: "textColor")
@@ -228,10 +228,10 @@ struct Font : StyleProperty {
 //
 // MARK:- Background : StyleProlerty
 //
-struct Background : StyleProperty {
+public struct Background : StyleProperty {
     var color: UIColor          = UIColor.clear
     
-    init(propSet: [String: Any]) {
+    public init(propSet: [String: Any]) {
         let keys = propSet.keys.filter{ x in x.components(separatedBy: ".").get(0)?.lowercased() == "bg" }
         for key in keys {
             switch key.lowercased() {
@@ -245,7 +245,7 @@ struct Background : StyleProperty {
         }
     }
     
-    func apply(view: UIView, for state: UIControlState = UIControlState.normal) {
+    public func apply(view: UIView, for state: UIControlState = UIControlState.normal) {
         if let btn = view as? UIButton {
             btn.setBackgroundImage(self.color.toImage(), for: state)
         } else {
@@ -273,12 +273,12 @@ struct Background : StyleProperty {
 //
 // MARK:- Border : StyleProlerty
 //
-struct Border : StyleProperty {
+public struct Border : StyleProperty {
     var color: UIColor          = UIColor.black
     var width: CGFloat          = 0
     var roundCorner: CGFloat?   = nil
     
-    init(propSet: [String: Any]) {
+    public init(propSet: [String: Any]) {
         let keys = propSet.keys.filter{ x in x.components(separatedBy: ".").get(0)?.lowercased() == "border" }
         for key in keys {
             switch key.lowercased() {
@@ -300,7 +300,7 @@ struct Border : StyleProperty {
         }
     }
     
-    func apply(view: UIView, for sate: UIControlState = UIControlState.normal) {
+    public func apply(view: UIView, for sate: UIControlState = UIControlState.normal) {
         if let conerRadius = self.roundCorner {
             view.clipsToBounds = true
             view.layer.cornerRadius = conerRadius
