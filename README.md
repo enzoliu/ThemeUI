@@ -6,6 +6,8 @@
 
 **A JSON based UI style setting for iOS.**
 
+![image](https://github.com/enzoliu/ThemeUI/blob/master/resources/ThemeUI.gif) 
+
 ## Requirements
 ## Installation
 
@@ -206,9 +208,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
 2. Replace `HTTPGet` to your HTTP request method.  
 3. Please don't forget set the render controller as the theme's delegate.  
 
-`Command + R` !  
-You will see the result like this :  
-![image](https://github.com/enzoliu/ThemeUI/blob/master/resources/ThemeUI.gif) 
+And it's done!  
 
 ## Change log
 v0.1.0 - Initial release  
