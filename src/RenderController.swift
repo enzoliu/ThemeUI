@@ -53,7 +53,7 @@ public class RenderController: ThemeDelegate {
         self.viewStylingQueue = []
     }
     
-    func didFinishedLoadConfig() {
+    public func didFinishedLoadConfig() {
         self.apply()
     }
 }

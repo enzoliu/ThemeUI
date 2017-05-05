@@ -213,7 +213,7 @@ And it's done!
 ## Change log
 v0.1.0 - Initial release  
 v0.2.0 - Support download theme from internet.    
-v0.2.2 - Fix method unavailable bug.  
+v0.2.1 - Fix method unavailable bug.  
 
 ## License
 
